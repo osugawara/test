@@ -1,0 +1,17 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: #{repository: busybox}
+    repository: alpine
+    tag: 3.4
+
+run:
+  # path: echo
+  # args: [hello world]
+  path: /bin/sh
+  args:
+    - -c
+    - -x
+    - |
+      uname -a
